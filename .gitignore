@@ -1,0 +1,10 @@
+.DS_Store
+Collected Data/
+data/
+*.pt
+*.sdf
+*.mol
+*.zip
+*.csv
+__pycache__/
+.ipynb_checkpoints/
