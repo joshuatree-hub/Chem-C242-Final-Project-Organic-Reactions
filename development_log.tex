@@ -17,10 +17,10 @@ Goal: Find chemical motifs that are important and can perform chemical reactions
  - Use and purpose: 
     - This model can be used to find motifs that are important for certain reactions. This can be used to design new molecules that have those motifs and can perform those reactions.
     - Doesn't do the chemical reaction prediction, but sure does make looking for organic reactions to work with theoretically easier.
-    - KEY QUESTION: Does including the physics of DFT better than just looking at the motifs that the LLM finds?
+    - KEY QUESTION: Does including the physics of DFT better than just looking at the motifs that the transformer finds?
 
 Sources: 
-    1. LLM and Organic Reactions learning not to do 'alchemy': https://pmc.ncbi.nlm.nih.gov/articles/PMC6764164/ 
+    1. LLM and Organic Reactions learning not to do "alchemy": https://pmc.ncbi.nlm.nih.gov/articles/PMC6764164/ 
         - The Molecular Transformer demonstrates that chemical reactions can be predicted with high accuracy using sequence-based models, 
         but these models primarily learn statistical patterns in SMILES representations rather than underlying chemical mechanisms.
     2. GNN and how to represent molecules as graphs: https://arxiv.org/abs/1704.01212
@@ -30,7 +30,7 @@ Sources:
 4/1/26 Checkpoint No. 1
 ##################################################
 
-I need to have done 'Data Preparation' for my models that I will be creating. Because SAVIO has been down for the past week, I have until tommorow night to get this done, 
+I need to have done "Data Preparation" for my models that I will be creating. Because SAVIO has been down for the past week, I have until tommorow night to get this done, 
 but I don't think I need SAVIO just yet. We'll see. 
 
 For the GNN, I need to find a dataset that has DFT data for molecules and their reactions. And for the decision tree, I need to find a dataset that has reaction types for molecules.
@@ -43,9 +43,13 @@ I have found a dataset that has DFT data for molecules (https://alchemy.tencent.
 I will stick with the USPTO-50K dataset for the reaction data because there is literally no other dataset that has reaction types for the molecules.
 
 So I just tried to push to GitHub but I realized that the sdf files from alchemy and others were too large to push. I have tried for the past few hours and I give up. 
-I will just offload it to SAVIO. (Read .gitignore for more details.)
+I will just offload it to SAVIO or just keep it on my local machine for now. (Read .gitignore for more details.)
 
 ##################################################
 4/2/26 Progress on the Code
 ##################################################
 
+Using a fraction of the data so I can run this locally: 
+    1. I need to now make the GNN and decision model. 
+    2. I will also need to make the LLM model seperately.
+    3. Compare how the two perform vs each other.
