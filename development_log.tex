@@ -1,0 +1,46 @@
+##################################################
+3/30/26 Project Proposal
+##################################################
+
+This is a development log for the project to keep track of where I am in this project. Currently, I am finding data to work with for this ML project. 
+However, it is first prudent to define the goal of this project before we get into the data collection. 
+
+Goal: Find chemical motifs that are important and can perform chemical reactions of a certain type. For example, glycolic acid's motif is important for protection reactions. 
+ - Structure: 
+    - Model 1: 
+        - A GNN using DFT data will find features for unknown molecules. 
+        - A decision tree will then use those features for classification of the reaction type. 
+    - Model 2: 
+        - A LLM that will group certain atoms together as motifs and then use those motifs to classify the reaction type.
+        - Analyze the motifs that the LLM finds and compare them to the features that the GNN finds.
+        - KEY QUESTION: Does including the physics of DFT better than just looking at the motifs that the LLM finds?
+    
+ - Use and purpose: 
+    - This model can be used to find motifs that are important for certain reactions. This can be used to design new molecules that have those motifs and can perform those reactions.
+    - Doesn't do the chemical reaction prediction, but sure does make looking for organic reactions to work with theoretically easier.
+
+Sources: 
+    1. LLM and Organic Reactions learning not to do 'alchemy':
+    2. GNN and how to represent molecules as graphs:
+
+##################################################
+4/1/26 Checkpoint No. 1
+##################################################
+
+I need to have done 'Data Preparation' for my models that I will be creating. Because SAVIO has been down for the past week, I have until tommorow night to get this done, 
+but I don't think I need SAVIO just yet. We'll see. 
+
+For the GNN, I need to find a dataset that has DFT data for molecules and their reactions. And for the decision tree, I need to find a dataset that has reaction types for molecules.
+For the LLM, all I will need is the dataset that has the reaction types for the molecules. But I need to work backwards. 
+
+The USPTO-50K dataset gives me what I need for reactions, and has 10 reaction types. It is drawn from the noisier USPTO dataset, with inumerous reaction labels. 
+Before I can use this dataset, I need to know what elements are involved in the reactions, and then I can find DFT data for those molecules. I will write the python script. 
+
+I have found a dataset that has DFT data for molecules (https://alchemy.tencent.com/) that has more elements than just CHONF. Remeber to cite this when I write my paper. 
+I will stick with the USPTO-50K dataset for the reaction data because there is literally no other dataset that has reaction types for the molecules.
+
+So I just tried to push to GitHub but I realized that the sdf files from alchemy and others were too large to push. I have tried for the past few hours and I give up. I will just offload it to SAVIO.
+
+##################################################
+4/2/26 Progress on the Code
+##################################################
