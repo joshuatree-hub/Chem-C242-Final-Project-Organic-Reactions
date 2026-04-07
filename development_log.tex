@@ -57,3 +57,24 @@ Using a fraction of the data so I can run this locally:
     3. Compare how the two perform vs each other.
 
 Let's start with just the GNN and make sure that works. I'm also gonna do 3-fold cross validation to make sure that the model is not overfitting.
+
+##################################################
+4/4/26 It came to me like a dream.
+##################################################
+
+Oh god, it's begun. I've started dreaming about this class. Well, more accurately, I woke up and the idea hit me. I don't need a decision tree, I just need to bake the GNN output values
+and shove them into the transformer. That way, it would be a way better comparison of whether adding physics values would help me or not. All I have to do is figure out how to do a transformer
+earlier than what was taught in class. 
+
+    (1) As I have written the GNN, I started wondering if adding hydrogens would be important to the physics of all this? The smiles only has the elements, or maybe they're superfluous.
+        They could also be terrible for run time. Maybe that's something I'll revisit at some point. 
+    (2) My GNN does has like R^2 = 0.5 for small sample sizes which has me somewhat concerned. Something I should ask Juan. 
+
+##################################################
+4/6/26 Checkpoint No. 2
+##################################################
+
+I miss winter break. I miss SoCal. I also miss good food. I can not imagine returning to Berkeley for grad school unless I have a car.
+
+aNyHOw, 'ML model construction and workflow development' check up time, and I think I will just focus on the skeleton of this ML model which is finishing making the GNN
+and the transformer.
