@@ -88,3 +88,25 @@ Write now, the first focus is making sure C and Cl do not get mixed up!
 
 Surround the GNN layers around with MLP layers to increase the capacity because GNNS tend to have low capacity. 
 
+##################################################
+4/12/26 The Godforsaken GNN
+##################################################
+
+I am getting like R^2 of like 0.4 for the regresssion of the NN. I've swapped the the loss_type
+to smoothl1 loss because these examples that it trains on can be very chemically different considering how many elements
+there are.
+
+I do wonder though, could it be features of the nodes that could be the problem? Like are they good tto help predict the homo, lumo, 
+dG, etc.? I could also test it out. 
+
+At the very least, I have made the pipeline to explore hyperparameters to find the best for the final GNN. 
+
+Okay if this isn't working out, why don't I try something else? Let's try do a model that takes in the 3-d features 
+of the molecule because that is way more powerful for quantum preditions in the alchemy dataset.
+
+The GNN has the limitation that I can't do bond angles. Angles are defined by three nodes (ijk)
+but the GINEConv only accepts features for node i. I can only do bond lengths. Hopefully that should help. 
+If not I'll have to switch architechtures.
+
+I mean to be fair, an bond lengths force a defined angle if nodes are connected, so maybe I 
+can get away by adding the bond length only to improve R^2. 
