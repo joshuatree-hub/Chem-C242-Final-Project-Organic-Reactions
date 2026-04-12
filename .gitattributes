@@ -4,5 +4,5 @@
 *.mol filter=lfs diff=lfs merge=lfs -text
 *.zip filter=lfs diff=lfs merge=lfs -text
 
-// from my attempt to push the large sdf files to GitHub
-// not used, leave here for now for reference
+# from my attempt to push the large sdf files to GitHub
+# not used, leave here for now for reference

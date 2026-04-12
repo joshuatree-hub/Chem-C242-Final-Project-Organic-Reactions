@@ -4,4 +4,4 @@ data/
 __pycache__/
 .ipynb_checkpoints/
 
-// ignore the .sdf files because they are too large to push to GitHub
+# ignore the .sdf files because they are too large to push to GitHub
